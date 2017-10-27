@@ -32,6 +32,7 @@
 
 extern "C" {
 #include <fprint.h>
+#include <unistd.h>
 }
 
 QImage readFinger();
