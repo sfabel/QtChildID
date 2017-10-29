@@ -1,26 +1,40 @@
-  name: qtchildid
-  version: '1.0-alpha'
-  summary: QT4-based Child ID System
-  description: |
-    This is an old version of the QT4-based Child ID system used 
-    by the Grand Lodge of Hawaii to conduct Child ID events. It 
-    allows you to register a child, take fingerprints and print IDs. 
-    At no point is any data stored either locally or remotely, so 
-    this is completely secure.
+name: qtchildid
+version: '1.0-alpha'
+summary: QT4-based Child ID System
+description: |
+  This is an old version of the QT4-based Child ID system used 
+  by the Grand Lodge of Hawaii to conduct Child ID events. It 
+  allows you to register a child, take fingerprints and print IDs. 
+  At no point is any data stored either locally or remotely, so 
+  this is completely secure.
 
-  grade: devel # must be 'stable' to release into candidate/stable channels
-  confinement: devmode # use 'strict' once you have the right plugs and slots
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
+architectures: [amd64, i386]
 
-  parts:
-    main:
-      plugin: make 
+apps:
+  qtchildid:
+    command: QtChildID
 
-      build: |
-        qmake
-        make
-
-      build-packages:
-        - qt4-default
-        - libopencv-dev
-        - libpoppler-qt4-dev
-        - libfprint-dev
+parts:
+  qtchildid:
+    plugin: qmake
+    source: .
+    qt-version: qt4
+    project-files:
+      - QtChildID.pro
+    stage-packages:
+      - libqtgui4
+      - libfprint0
+      - libpoppler-qt4-4
+      - libopencv-highgui2.4v5
+      - libopencv-core2.4v5
+    build-packages:
+      - qt4-default
+      - libopencv-dev
+      - libpoppler-qt4-dev
+      - libfprint-dev
+    install: |
+      mkdir $SNAPCRAFT_PART_INSTALL/bin
+      cp QtChildID $SNAPCRAFT_PART_INSTALL/bin/
+    after: [qt4conf] 
