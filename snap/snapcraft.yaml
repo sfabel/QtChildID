@@ -12,8 +12,12 @@
   confinement: devmode # use 'strict' once you have the right plugs and slots
 
   parts:
-    my-part:
+    main:
       plugin: make 
+
+      build: |
+      qmake
+      make
 
       build-packages:
         - qt4-default
