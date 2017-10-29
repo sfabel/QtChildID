@@ -16,8 +16,8 @@
       plugin: make 
 
       build: |
-      qmake
-      make
+        qmake
+        make
 
       build-packages:
         - qt4-default
