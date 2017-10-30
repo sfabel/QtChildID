@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0-alpha
+Encoding=UTF-8
+Name=QT Child ID
+Generic Name=QT Child ID
+Comment=Conduct National Child Identification Enrollment
+Exec=qtchildid.app
+Icon=freemason.xpm
+Terminal=false
