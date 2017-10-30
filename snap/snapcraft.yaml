@@ -2,16 +2,12 @@ name: qtchildid
 version: '1.0-alpha'
 summary: QT4-based Child ID System
 description: |
-  This is an old version of the QT4-based Child ID system used 
-  by the Grand Lodge of Hawaii to conduct Child ID events. It 
-  allows you to register a child, take fingerprints and print IDs. 
-  At no point is any data stored either locally or remotely, so 
-  this is completely secure.
-grade: stable
-confinement: strict 
-architectures: 
-  - i386
-  - amd64
+  QT4-based Child ID system used to conduct Child ID events. It allows
+  you to register a child, take fingerprints and print IDs containing
+  relevant data in case of a child abduction scenario. The data is
+  deleted after each entry and not stored remotely at any point.
+grade: devel
+confinement: strict
 apps:
   qtchildid:
     command: qt4-launch QtChildID
