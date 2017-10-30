@@ -8,15 +8,15 @@ description: |
   At no point is any data stored either locally or remotely, so 
   this is completely secure.
 grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: strict
+confinement: classic
 architectures: 
   - i386
   - amd64
-
 apps:
   qtchildid:
     command: qt4-launch QtChildID
-
+    plugs:
+      - camera
 parts:
   qtchildid:
     plugin: qmake
