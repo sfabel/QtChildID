@@ -1,0 +1,223 @@
+
+fingerprint.cpp,128
+QImage readFinger(24,1747
+struct fp_dscv_dev *discover_device(discover_device117,3645
+struct fp_img *enroll(enroll131,3997
+
+Image_Processing.cpp,179
+Image_Processing::Image_Processing(24,1752
+Image_Processing::~Image_Processing(30,1908
+int Image_Processing::initAttributes(33,1952
+int Image_Processing::captureFrame(58,2665
+
+keikimwindow.cpp,485
+KeikiMWindow::KeikiMWindow(34,1911
+KeikiMWindow::~KeikiMWindow(77,3824
+void KeikiMWindow::updateImage(97,4199
+void KeikiMWindow::saveImage(104,4365
+void KeikiMWindow::doLThumb(120,4689
+void KeikiMWindow::doRThumb(128,4879
+void KeikiMWindow::clearAll(136,5069
+void KeikiMWindow::print(176,6123
+void KeikiMWindow::clearTotalCounter(410,17984
+void KeikiMWindow::clearSessionCounter(419,18199
+void KeikiMWindow::showAboutDlg(425,18336
+void KeikiMWindow::showTutorial(447,19312
+
+main.cpp,18
+int main(25,1778
+
+moc_keikimwindow.cpp,631
+static const uint qt_meta_data_KeikiMWindow[qt_meta_data_KeikiMWindow19,715
+static const char qt_meta_stringdata_KeikiMWindow[qt_meta_stringdata_KeikiMWindow49,1528
+void KeikiMWindow::qt_static_metacall(58,1843
+const QMetaObjectExtraData KeikiMWindow::staticMetaObjectExtraData 81,2729
+const QMetaObject KeikiMWindow::staticMetaObject 85,2832
+const QMetaObject &KeikiMWindow::getStaticMetaObject(KeikiMWindow::getStaticMetaObject91,3050
+const QMetaObject *KeikiMWindow::metaObject(KeikiMWindow::metaObject94,3165
+void *KeikiMWindow::qt_metacast(KeikiMWindow::qt_metacast99,3310
+int KeikiMWindow::qt_metacall(107,3570
+
+moc_qtopencv.cpp,606
+static const uint qt_meta_data_qtopencv[qt_meta_data_qtopencv19,703
+static const char qt_meta_stringdata_qtopencv[qt_meta_stringdata_qtopencv47,1430
+void qtopencv::qt_static_metacall(54,1636
+const QMetaObjectExtraData qtopencv::staticMetaObjectExtraData 73,2316
+const QMetaObject qtopencv::staticMetaObject 77,2415
+const QMetaObject &qtopencv::getStaticMetaObject(qtopencv::getStaticMetaObject83,2617
+const QMetaObject *qtopencv::metaObject(qtopencv::metaObject86,2728
+void *qtopencv::qt_metacast(qtopencv::qt_metacast91,2869
+int qtopencv::qt_metacall(99,3113
+void qtopencv::newImg(113,3439
+
+qrc_resources.cpp,294
+static const unsigned char qt_resource_data[qt_resource_data11,331
+static const unsigned char qt_resource_name[qt_resource_name9252,754704
+static const unsigned char qt_resource_struct[qt_resource_struct9276,755385
+int QT_MANGLE_NAMESPACE(9303,756223
+Q_CONSTRUCTOR_FUNCTION(9310,756414
+
+qtopencv.cpp,167
+qtopencv::qtopencv(35,2117
+qtopencv::~qtopencv(52,2470
+void qtopencv::ocv2qt(71,3020
+void qtopencv::captureStarted(97,3643
+void qtopencv::captureStopped(106,3794
+
+fingerprint.h,30
+#define FINGERPRINT_H23,1743
+
+Image_Processing.h,1040
+#define IMAGE_PROCESSING_H_23,1749
+using namespace cv;28,1856
+using std::vector;31,1895
+using std::cerr;34,1935
+using std::cout;35,1952
+using std::endl;36,1969
+class Image_Processing38,1987
+    inline Mat getFrame(Image_Processing::getFrame46,2103
+    inline Size2i getSize(Image_Processing::getSize50,2161
+    inline int getType(Image_Processing::getType54,2225
+    inline void closeCapture(Image_Processing::closeCapture58,2289
+    VideoCapture  capture;Image_Processing::capture65,2392
+    double	  brightness,Image_Processing::brightness66,2419
+    double	  brightness, hue,Image_Processing::hue66,2419
+    double	  brightness, hue, contrast,Image_Processing::contrast66,2419
+    double	  brightness, hue, contrast, saturation;Image_Processing::saturation66,2419
+    Size2i        frame_size;Image_Processing::frame_size67,2471
+    Mat           dframe;Image_Processing::dframe69,2502
+    Mat           cframe;Image_Processing::cframe70,2528
+    vector< Mat > channels;Image_Processing::channels71,2554
+
+keikimwindow.h,1020
+#define KEIKIMWINDOW_H23,1744
+class KeikiMWindow 44,2071
+    inline void createPDF(KeikiMWindow::createPDF64,2460
+    inline void toggleTemplate(KeikiMWindow::toggleTemplate68,2538
+    Ui::KeikiMWindow *ui;KeikiMWindow::ui73,2632
+    qtopencv         *ocv;KeikiMWindow::ocv74,2658
+    QPixmap          *pixmap;KeikiMWindow::pixmap75,2685
+    QPixmap          *lPrintPixmap;KeikiMWindow::lPrintPixmap76,2715
+    QPixmap          *rPrintPixmap;KeikiMWindow::rPrintPixmap77,2751
+    QImage            theImage;KeikiMWindow::theImage78,2787
+    QImage            lPrint;KeikiMWindow::lPrint79,2819
+    QImage            rPrint;KeikiMWindow::rPrint80,2849
+    unsigned int      sessionCounter;KeikiMWindow::sessionCounter81,2879
+    unsigned int      totalCounter;KeikiMWindow::totalCounter82,2917
+    bool              cam_active;KeikiMWindow::cam_active83,2953
+    bool              do_template;KeikiMWindow::do_template84,2987
+    bool              print_pdf;KeikiMWindow::print_pdf85,3022
+
+qtopencv.h,766
+#define QTOPENCV_H23,1740
+class qtopencv 32,1866
+    inline QImage* getImage(qtopencv::getImage40,1975
+    inline QImage getImageData(qtopencv::getImageData44,2066
+    inline void closeCamera(qtopencv::closeCamera48,2137
+    inline void setWidth(qtopencv::setWidth55,2268
+    inline void setHeight(qtopencv::setHeight60,2350
+    inline void start(qtopencv::start65,2434
+    inline void stop(qtopencv::stop69,2493
+    Image_Processing    *ip;qtopencv::ip77,2589
+    QTimer              *timer;qtopencv::timer78,2618
+    cv::Mat              ocv_image;qtopencv::ocv_image79,2650
+    QImage	         qimage;qtopencv::qimage80,2686
+    int                  width;qtopencv::width81,2714
+    int                  height;qtopencv::height82,2746
+
+ui_keikimwindow.h,4490
+#define UI_KEIKIMWINDOW_H10,391
+class Ui_KeikiMWindow37,1045
+    QAction *actionQuit;actionQuit40,1077
+    QAction *actionPrint;actionPrint41,1102
+    QAction *actionClear_All;actionClear_All42,1128
+    QAction *actionUse_Template_File;actionUse_Template_File43,1158
+    QAction *actionReset_Session_Couter;actionReset_Session_Couter44,1196
+    QAction *actionReset_Total_Counter;actionReset_Total_Counter45,1237
+    QAction *actionAbout;actionAbout46,1277
+    QAction *actionAbout_Qt;actionAbout_Qt47,1303
+    QAction *actionCreate_PDF;actionCreate_PDF48,1332
+    QAction *actionTutorial;actionTutorial49,1363
+    QWidget *centralWidget;centralWidget50,1392
+    QTabWidget *tabWidget;tabWidget51,1420
+    QWidget *tab;tab52,1447
+    QWidget *gridLayoutWidget;gridLayoutWidget53,1465
+    QGridLayout *gridLayout;gridLayout54,1496
+    QPushButton *btn_LThumb;btn_LThumb55,1525
+    QPushButton *btn_RThumb;btn_RThumb56,1554
+    QPushButton *btn_savePhoto;btn_savePhoto57,1583
+    QLabel *imgframe;imgframe58,1615
+    QLabel *lthumbframe;lthumbframe59,1637
+    QLabel *rthumbframe;rthumbframe60,1662
+    QWidget *formLayoutWidget;formLayoutWidget61,1687
+    QFormLayout *formLayout;formLayout62,1718
+    QLabel *label;label63,1747
+    QLineEdit *lineEdit_FirstName;lineEdit_FirstName64,1766
+    QLabel *label_2;label_265,1801
+    QLineEdit *lineEdit_LastName;lineEdit_LastName66,1822
+    QLabel *label_3;label_367,1856
+    QDateEdit *dateEdit;dateEdit68,1877
+    QLabel *label_4;label_469,1902
+    QVBoxLayout *verticalLayout_2;verticalLayout_270,1923
+    QRadioButton *radioMale;radioMale71,1958
+    QRadioButton *radioFemale;radioFemale72,1987
+    QLabel *label_6;label_673,2018
+    QLineEdit *lineEdit_Guardian;lineEdit_Guardian74,2039
+    QLabel *label_5;label_575,2073
+    QHBoxLayout *weightLayout;weightLayout76,2094
+    QSpinBox *spinBox_lbs;spinBox_lbs77,2125
+    QLabel *label_7;label_778,2152
+    QSpinBox *spinBox_oz;spinBox_oz79,2173
+    QLabel *label_19;label_1980,2199
+    QLabel *label_51;label_5181,2221
+    QHBoxLayout *heightLayout;heightLayout82,2243
+    QSpinBox *spinBox_ft;spinBox_ft83,2274
+    QLabel *label_20;label_2084,2300
+    QSpinBox *spinBox_in;spinBox_in85,2322
+    QLabel *label_21;label_2186,2348
+    QWidget *verticalLayoutWidget;verticalLayoutWidget87,2370
+    QVBoxLayout *verticalLayout;verticalLayout88,2405
+    QPushButton *btn_Print;btn_Print89,2438
+    QPushButton *btn_clear;btn_clear90,2466
+    QPushButton *btn_Quit;btn_Quit91,2494
+    QWidget *gridLayoutWidget_2;gridLayoutWidget_292,2521
+    QGridLayout *gridLayout_2;gridLayout_293,2554
+    QLabel *label_session;label_session94,2585
+    QLabel *label_9;label_995,2612
+    QLabel *label_10;label_1096,2633
+    QLabel *label_total;label_total97,2655
+    QLabel *label_8;label_898,2680
+    QWidget *tab_2;tab_299,2701
+    QWidget *formLayoutWidget_2;formLayoutWidget_2100,2721
+    QFormLayout *formLayout_2;formLayout_2101,2754
+    QLabel *label_11;label_11102,2785
+    QLineEdit *lineEdit_Street;lineEdit_Street103,2807
+    QLabel *label_12;label_12104,2839
+    QLineEdit *lineEdit_Address2;lineEdit_Address2105,2861
+    QLabel *label_25;label_25106,2895
+    QLineEdit *lineEdit_MiddleName;lineEdit_MiddleName107,2917
+    QLabel *label_26;label_26108,2953
+    QLineEdit *lineEdit_Nickname;lineEdit_Nickname109,2975
+    QLabel *label_13;label_13110,3009
+    QLineEdit *lineEdit_School;lineEdit_School111,3031
+    QLabel *label_14;label_14112,3063
+    QLineEdit *lineEdit_Doctors;lineEdit_Doctors113,3085
+    QLabel *label_15;label_15114,3118
+    QLineEdit *lineEdit_Dentist;lineEdit_Dentist115,3140
+    QLabel *label_24;label_24116,3173
+    QLineEdit *lineEdit_SSN;lineEdit_SSN117,3195
+    QLabel *label_16;label_16118,3224
+    QComboBox *comboBox_Race;comboBox_Race119,3246
+    QLabel *label_22;label_22120,3276
+    QLineEdit *lineEdit_Eyes;lineEdit_Eyes121,3298
+    QLabel *label_23;label_23122,3328
+    QLineEdit *lineEdit_Hair;lineEdit_Hair123,3350
+    QMenuBar *menuBar;menuBar124,3380
+    QMenu *menuFile;menuFile125,3403
+    QMenu *menuExtras;menuExtras126,3424
+    QMenu *menuHelp;menuHelp127,3447
+    QStatusBar *statusBar;statusBar128,3468
+    void setupUi(130,3496
+    void retranslateUi(Ui_KeikiMWindow::retranslateUi626,25474
+namespace Ui 819,45777
+    class KeikiMWindow:Ui::KeikiMWindow820,45792

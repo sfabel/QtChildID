@@ -11,7 +11,7 @@ confinement: strict
 apps:
   qtchildid:
     command: qt4-launch QtChildID
-    plugs: [home, camera]
+    plugs: [hardware-observe, network-observe, camera, x11, devices, raw-usb]
 parts:
   qtchildid:
     plugin: qmake
