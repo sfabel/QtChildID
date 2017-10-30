@@ -32,7 +32,7 @@ I am distributing this software mostly as snap because it relieves the
 user from having to install a bunch of dependencies. 
 
 ```
-$ sudo snap install qtchildid
+$ sudo snap install --classic qtchildid
 ```
 
 Should be all that's required to install.
