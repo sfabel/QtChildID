@@ -6,13 +6,19 @@ description: |
   you to register a child, take fingerprints and print IDs containing
   relevant data in case of a child abduction scenario. The data is
   deleted after each entry and not stored remotely at any point.
+type: app
 grade: devel
 confinement: strict
 apps:
   qtchildid:
     command: qt4-launch QtChildID
     desktop: qtchildid.desktop
-    plugs: [hardware-observe, network-observe, camera, x11,, raw-usb]
+    plugs:
+      - hardware-observe
+      - network-observe
+      - camera
+      - x11
+      - raw-usb
 parts:
   app:
     plugin: qmake
