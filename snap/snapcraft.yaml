@@ -15,8 +15,7 @@ architectures:
 apps:
   qtchildid:
     command: qt4-launch QtChildID
-    plugs:
-      - camera
+    plugs: [home, camera]
 parts:
   qtchildid:
     plugin: qmake
