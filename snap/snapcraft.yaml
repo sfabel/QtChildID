@@ -7,14 +7,15 @@ description: |
   allows you to register a child, take fingerprints and print IDs. 
   At no point is any data stored either locally or remotely, so 
   this is completely secure.
-
 grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: devmode # use 'strict' once you have the right plugs and slots
-architectures: [amd64, i386]
+confinement: strict
+architectures: 
+  - i386
+  - amd64
 
 apps:
   qtchildid:
-    command: QtChildID
+    command: qt4-launch QtChildID
 
 parts:
   qtchildid:
