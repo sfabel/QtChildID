@@ -13,7 +13,6 @@ apps:
   qtchildid:
     command: desktop-launch QtChildID
     plugs:
-      - hardware-observe
       - network
       - camera
       - x11
