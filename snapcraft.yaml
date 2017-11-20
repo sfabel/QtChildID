@@ -11,11 +11,10 @@ grade: devel
 confinement: strict
 apps:
   qtchildid:
-    command: qt4-launch QtChildID
-    desktop: qtchildid.desktop
+    command: desktop-launch QtChildID
     plugs:
       - hardware-observe
-      - network-observe
+      - network
       - camera
       - x11
       - raw-usb
@@ -40,4 +39,4 @@ parts:
     install: |
       mkdir $SNAPCRAFT_PART_INSTALL/bin
       cp QtChildID $SNAPCRAFT_PART_INSTALL/bin/
-    after: [qt4conf] 
+    after: [desktop-qt4] 
