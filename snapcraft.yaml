@@ -1,5 +1,5 @@
 name: qtchildid
-version: '1.0-alpha'
+version: '1.0-beta'
 summary: QT4-based Child ID System
 description: |
   QT4-based Child ID system used to conduct Child ID events. It allows
