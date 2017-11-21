@@ -27,6 +27,7 @@ you're working with. Saving kids is all that counts.
 ### Distribution
 
 #### Using Snap
+[![Snap Status](https://build.snapcraft.io/badge/sfabel/QtChildID.svg)](https://build.snapcraft.io/user/sfabel/QtChildID)
 
 I am distributing this software mostly as snap because it relieves the
 user from having to install a bunch of dependencies. 
