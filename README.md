@@ -21,8 +21,11 @@ you're working with. Saving kids is all that counts.
 ### Requirements
 - Fingerprint Reader supported by
   [libfprint](https://www.freedesktop.org/wiki/Software/fprint/libfprint/)
-- Any Linux supported WebCam
+- Any Linux supported (web) camera
 - X11
+
+Note: The application will start without either a webcam or fingerprint
+scanner present, but the functionality will obviously be greatly reduced.
 
 ### Distribution
 
@@ -38,7 +41,7 @@ $ sudo snap install qtchildid
 
 Should be all that's required to install. Note that at this point, several of
 the required plugs may not be auto-connected upon install. If there are any
-issues, please file a bug here.
+issues, please file a bug.
 
 #### Building from source
 

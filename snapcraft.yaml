@@ -7,7 +7,7 @@ description: |
   relevant data in case of a child abduction scenario. The data is
   deleted after each entry and not stored remotely at any point.
 type: app
-grade: devel
+grade: stable
 confinement: strict
 apps:
   qtchildid:
