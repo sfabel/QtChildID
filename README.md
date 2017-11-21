@@ -1,4 +1,4 @@
-# QtChildID v1.0-alpha
+# QtChildID v1.0-beta
 ## Introduction
 
 QtChildID is free software for the purpose of supporting "Child ID"
@@ -35,7 +35,9 @@ user from having to install a bunch of dependencies.
 $ sudo snap install qtchildid
 ```
 
-Should be all that's required to install.
+Should be all that's required to install. Note that at this point, several of
+the required plugs may not be auto-connected upon install. If there are any
+issues, please file a bug here.
 
 #### Building from source
 
