@@ -1,21 +1,21 @@
 /////////////////////////////////////////////////////////////////////////////////////
-// This file is part of QChildID.                                                  //
+// This file is part of QtChildID.                                                  //
 //                                                                                 //
-//        QChildID is free software: you can redistribute it and/or modify         //
+//        QtChildID is free software: you can redistribute it and/or modify         //
 //        it under the terms of the GNU General Public License as published by     //
 //        the Free Software Foundation, either version 3 of the License, or        //
 //        (at your option) any later version.                                      //
 //                                                                                 //
-//        QChildID is distributed in the hope that it will be useful,              //
+//        QtChildID is distributed in the hope that it will be useful,              //
 //        but WITHOUT ANY WARRANTY; without even the implied warranty of           //
 //        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
 //        GNU General Public License for more details.                             //
 //                                                                                 //
 //        You should have received a copy of the GNU General Public License        //
-//        along with QChildID.  If not, see <http://www.gnu.org/licenses/>.        //
+//        along with QtChildID.  If not, see <http://www.gnu.org/licenses/>.        //
 //                                                                                 //
-// QChildID - Copyright 2010, 2011                                                 //
-// written by Stephan Fabel <stephan.fabel+qchildid@gmail.com>                     //
+// QtChildID - Copyright 2010, 2011                                                 //
+// written by Stephan Fabel <stephan.fabel+QtChildID@gmail.com>                     //
 //                                                                                 //
 /////////////////////////////////////////////////////////////////////////////////////
 
@@ -226,7 +226,7 @@ void KeikiMWindow::print()
         else {
             QMessageBox::critical(this,
                                   tr("Not supported (yet)!"),
-                                  tr("This version of QChildID requires the usage\n"
+                                  tr("This version of QtChildID requires the usage\n"
                                      "of a template. Please check \"Use Template\"\n"
                                      "in the Extras Menu."),
                                   QMessageBox::Ok);
@@ -428,9 +428,9 @@ void KeikiMWindow::showAboutDlg()
     QTextStream aboutText(&aText);
 
     aboutText << "<B>Version 1.0, April 2011</B><BR>"
-              << "Written by <A HREF=\"mailto:stephan.fabel+qchildid@gmail.com\">"
+              << "Written by <A HREF=\"mailto:stephan.fabel+QtChildID@gmail.com\">"
               << "Stephan Fabel</A><BR><BR>"
-              << "QChildID is used by the Hawaiian Grand Lodge of Free "
+              << "QtChildID is used by the Hawaiian Grand Lodge of Free "
               << "and Accepted Masons.<BR><BR>"
               << "If you are interested in using this program for your own "
               << "organization, feel free to modify the code accordingly, "
@@ -441,14 +441,14 @@ void KeikiMWindow::showAboutDlg()
               << "See the LICENSE.txt file for details.<BR>"
               ;
 
-    QMessageBox::about(this,tr("QChildID"),aText);
+    QMessageBox::about(this,tr("QtChildID"),aText);
 }
 
 void KeikiMWindow::showTutorial()
 {
     QString tText;
     QTextStream tutorialText(&tText);
-    tutorialText << "<B>QChildID Tutorial</B><BR><BR>"
+    tutorialText << "<B>QtChildID Tutorial</B><BR><BR>"
                  << "Usage:"
                  << "<UL>"
                  << "<LI>fill out all the form fields, but at least the ones from the first tab.<BR>"
@@ -463,5 +463,5 @@ void KeikiMWindow::showTutorial()
                  << "</UL>"
                  ;
 
-    QMessageBox::information(this,tr("QChildID"),tText);
+    QMessageBox::information(this,tr("QtChildID"),tText);
 }
