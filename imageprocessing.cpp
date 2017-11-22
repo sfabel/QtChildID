@@ -19,7 +19,7 @@
 //                                                                                 //
 /////////////////////////////////////////////////////////////////////////////////////
 
-#include "Image_Processing.h"
+#include "imageprocessing.h"
 
 Image_Processing::Image_Processing()
 {

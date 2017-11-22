@@ -1,37 +1,32 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2010-11-14T11:40:17
-#
-#-------------------------------------------------
+### QtChildID Project File
+###
+### stephan.fabel+QtChildID@gmail.com
 
-QT       += core gui
+TARGET       = QtChildID
+TEMPLATE     = app
 
-TARGET = QtChildID
-TEMPLATE = app
+### ENABLE DEBUGGING
 #DEFINES += DEBUG
 
-#LIBS += -L/usr/local/lib
-LIBS += -lfprint -lpoppler-qt4
+### LOCAL OPTIONS
+#INCLUDEPATH += /usr/local/include /usr/include/libfprint
+#LIBS        += -L/usr/local/lib
 
-# old opencv libs
-#LIBS += -lcv -lcxcore -lhighgui
+QT          += core gui
+INCLUDEPATH += /usr/include/libfprint
+LIBS        += -lfprint -lpoppler-qt4 -lopencv_core -lopencv_highgui
 
-# new opencv libs
-LIBS += -lopencv_core -lopencv_highgui
+SOURCES     += main.cpp\
+               keikimwindow.cpp \
+               qtopencv.cpp \
+               imageprocessing.cpp \
+               fingerprint.cpp
 
-INCLUDEPATH += /usr/local/include /usr/include/libfprint
+HEADERS     += keikimwindow.h \
+               qtopencv.h \
+               imageprocessing.h \
+               fingerprint.h
 
-SOURCES += main.cpp\
-           keikimwindow.cpp \
-           qtopencv.cpp \
-           Image_Processing.cpp \
-           fingerprint.cpp
+FORMS       += keikimwindow.ui
 
-HEADERS  += keikimwindow.h \
-            qtopencv.h \
-            Image_Processing.h \
-            fingerprint.h
-
-FORMS    += keikimwindow.ui
-
-RESOURCES += resources.qrc
+RESOURCES   += resources.qrc

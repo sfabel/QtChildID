@@ -27,7 +27,7 @@
 #include <QImage>
 #include <QPixmap>
 
-#include "Image_Processing.h"
+#include "imageprocessing.h"
 
 class qtopencv : public QWidget
 {
