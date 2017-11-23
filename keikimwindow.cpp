@@ -1,21 +1,21 @@
 /////////////////////////////////////////////////////////////////////////////////////
-// This file is part of QtChildID.                                                  //
+// This file is part of QtChildID.                                                 //
 //                                                                                 //
-//        QtChildID is free software: you can redistribute it and/or modify         //
+//        QtChildID is free software: you can redistribute it and/or modify        //
 //        it under the terms of the GNU General Public License as published by     //
 //        the Free Software Foundation, either version 3 of the License, or        //
 //        (at your option) any later version.                                      //
 //                                                                                 //
-//        QtChildID is distributed in the hope that it will be useful,              //
+//        QtChildID is distributed in the hope that it will be useful,             //
 //        but WITHOUT ANY WARRANTY; without even the implied warranty of           //
 //        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
 //        GNU General Public License for more details.                             //
 //                                                                                 //
 //        You should have received a copy of the GNU General Public License        //
-//        along with QtChildID.  If not, see <http://www.gnu.org/licenses/>.        //
+//        along with QtChildID.  If not, see <http://www.gnu.org/licenses/>.       //
 //                                                                                 //
-// QtChildID - Copyright 2010, 2011                                                 //
-// written by Stephan Fabel <stephan.fabel+QtChildID@gmail.com>                     //
+// QtChildID - Copyright 2010, 2011                                                //
+// written by Stephan Fabel <stephan.fabel+QtChildID@gmail.com>                    //
 //                                                                                 //
 /////////////////////////////////////////////////////////////////////////////////////
 
@@ -204,7 +204,10 @@ void KeikiMWindow::print()
 
             int dpi = printer.resolution()*2;
 
-            Poppler::Document* template_id = Poppler::Document::load("id_template.pdf");
+            QFile f(":/res/id_template.pdf");
+            f.open(QIODevice::ReadOnly);
+            Poppler::Document* template_id = Poppler::Document::loadFromData(f.readAll());
+            f.close();
 
             template_id->setRenderHint(Poppler::Document::TextAntialiasing, true);
             template_id->setRenderHint(Poppler::Document::Antialiasing, true);
