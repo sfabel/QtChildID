@@ -116,16 +116,22 @@ QImage readFinger()
 
 struct fp_dscv_dev *discover_device(struct fp_dscv_dev **discovered_devs)
 {
+// TODO: this always takes the first device, should really offer a way to
+// configure this
     struct fp_dscv_dev *ddev = discovered_devs[0];
-    struct fp_driver *drv;
-    if (!ddev)
+    
+    if (!ddev) {
         return NULL;
+    }
+    else {
 
-    drv = fp_dscv_dev_get_driver(ddev);
 #ifdef DEBUG
-    qDebug("Found device claimed by %s driver\n", fp_driver_get_full_name(drv));
+        struct fp_driver *drv = fp_dscv_dev_get_driver(ddev);
+        qDebug("Found device claimed by %s driver\n", fp_driver_get_full_name(drv));
 #endif
-    return ddev;
+
+        return ddev;
+    }
 }
 
 struct fp_img *enroll(struct fp_dev *dev) {
