@@ -11,11 +11,6 @@ missing person, the police has immediate access the the most valuable
 identification data. Most Child ID kits are tedious to set up. This
 software is intended to speed processing up.
 
-While in its current form, QtChildID was created for use of the
-Grand Lodge of Free and Accepted Masons of Hawaii, please do not
-hesitate to use it for good purposes, no matter which organization
-you're working with. Saving kids is all that counts.
-
 ## Installation
 
 ### Requirements
@@ -42,6 +37,13 @@ $ sudo snap install qtchildid
 Should be all that's required to install. Note that at this point, several of
 the required plugs may not be auto-connected upon install. If there are any
 issues, please file a bug.
+
+In the meantime, you may have to connect the plugs manually:
+
+```
+$ snap connect qtchildid:camera
+$ snap connect qtchildid:raw-usb
+```
 
 #### Building from source
 
