@@ -6,5 +6,5 @@ Name=QT Child ID
 Generic Name=QT Child ID
 Comment=Conduct National Child Identification Enrollment
 Exec=qtchildid.app
-Icon=freemason.xpm
+Icon=icon.xpm
 Terminal=false

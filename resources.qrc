@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/">
-        <file>res/freemason.jpg</file>
-        <file>res/freemason.xpm</file>
+        <file>res/logo.jpg</file>
+        <file>res/icon.xpm</file>
         <file>res/id_template.pdf</file>
     </qresource>
 </RCC>

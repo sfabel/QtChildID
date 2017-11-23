@@ -21,7 +21,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
-    <normaloff>:/res/freemason.xpm</normaloff>:/res/freemason.xpm</iconset>
+    <normaloff>:/res/icon.xpm</normaloff>:/res/icon.xpm</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>true</bool>
@@ -496,7 +496,7 @@ p, li { white-space: pre-wrap; }
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/res/freemason.jpg</pixmap>
+       <pixmap resource="resources.qrc">:/res/logo.jpg</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
